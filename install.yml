@@ -1,0 +1,128 @@
+- hosts: all
+  become: true
+  vars:
+    - docker_version: '18.09.9-3.el7.x86_64'
+    - kube_version: "1.29.2-1.1"
+    - kubernetes_minor_version: "v1.33"
+  tasks:
+  - name: Disable SWAP
+    shell: swapoff -a
+  - name: Create disable swap fstab
+    shell: line=$(grep -n -m 1 swap /etc/fstab | cut -d ":" -f 1) && sed -e "${line}s/^/#/" /etc/fstab > /etc/fstab.bk
+  - name: Disabled Swap
+    shell: cp /etc/fstab.bk /etc/fstab
+  - name: Active netfiter
+    shell: modprobe br_netfilter
+  - name: Test netfilter config
+    shell: if grep -q "^net.bridge.bridge-nf-call-iptables = 1" /etc/sysctl.conf; then echo false; else echo true;  fi
+    register: test_grep
+  - name: enable netfiler
+    lineinfile:
+      dest: /etc/sysctl.conf
+      line: net.bridge.bridge-nf-call-iptables = 1
+    when: test_grep.stdout == "true"
+  
+  - name: Create keyrings directory
+    file:
+      path: /etc/apt/keyrings
+      state: directory
+      mode: '0755'
+      owner: root
+      group: root
+
+  - name: Ensure /etc/apt/keyrings directory exists
+    file:
+      path: /etc/apt/keyrings
+      state: directory
+      mode: '0755'
+
+  - name: Download Docker GPG key
+    get_url:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      dest: /etc/apt/keyrings/docker.asc
+      mode: '0644'
+
+  - name: Convert Docker GPG key to .gpg format
+    command: >
+      gpg --dearmor -o /etc/apt/keyrings/docker.gpg /etc/apt/keyrings/docker.asc
+    args:
+      creates: /etc/apt/keyrings/docker.gpg
+
+  - name: Add Docker repository using keyring
+    copy:
+      dest: /etc/apt/sources.list.d/docker.list
+      content: |
+        deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu jammy stable
+      mode: '0644'
+
+  - name: Update apt cache
+    apt:
+      update_cache: yes
+
+  - name: Install Docker packages
+    apt:
+      name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
+      state: present
+      update_cache: yes
+
+  - name: Start Docker
+    service:
+      name: docker
+      state: started
+      enabled: yes
+  - name: Copy docker daemon.json
+    copy:
+      src: ./daemon.json
+      dest: /etc/docker/daemon.json
+      follow: yes
+  
+
+  - name: Remove old Kubernetes APT repository 
+    file:
+      path: /etc/apt/sources.list.d/kubernetes.list
+      state: absent
+
+  - name: Create keyrings directory
+    file:
+      path: /etc/apt/keyrings
+      state: directory
+      mode: '0755'
+
+  - name: Download Kubernetes GPG key
+    get_url:
+      url: "https://pkgs.k8s.io/core:/stable:/{{ kubernetes_minor_version }}/deb/Release.key"
+      dest: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+      mode: '0644'
+
+  - name: Add Kubernetes APT repository
+    apt_repository:
+      repo: "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/{{ kubernetes_minor_version }}/deb/ /"
+      state: present
+      filename: kubernetes.list
+
+  - name: Update apt cache
+    apt:
+      update_cache: yes
+  - name: Install Kubernetes components
+    ansible.builtin.apt:
+      name:
+        - kubeadm
+        - kubelet
+        - kubectl
+      state: present
+
+  - name: Enable and start kubelet
+    ansible.builtin.systemd:
+      name: kubelet
+      enabled: yes
+      state: started
+
+  - name: Reboot the system
+    ansible.builtin.reboot:
+      reboot_timeout: 300
+
