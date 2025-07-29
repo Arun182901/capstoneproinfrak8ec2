@@ -2,32 +2,31 @@
 - hosts: all
   become: true
   vars:
-    - docker_version: '18.09.9-3.el7.x86_64'
-    - kube_version: "1.29.2-1.1"
-    - kubernetes_minor_version: "v1.33"
+    docker_version: '18.09.9-3.el7.x86_64'
+    kube_version: "1.29.2-1.1"
+    kubernetes_minor_version: "v1.33"
 
   tasks:
     - name: Disable SWAP
       shell: swapoff -a
 
-    - name: Create disable swap fstab
-      shell: line=$(grep -n -m 1 swap /etc/fstab | cut -d ":" -f 1) && sed -e "${line}s/^/#/" /etc/fstab > /etc/fstab.bk
-
-    - name: Disabled Swap
-      shell: cp /etc/fstab.bk /etc/fstab
+    - name: Disable swap permanently
+      replace:
+        path: /etc/fstab
+        regexp: '^([^#].* swap .*)$'
+        replace: '# \1'
 
     - name: Activate netfilter
-      shell: modprobe br_netfilter
+      modprobe:
+        name: br_netfilter
+        state: present
 
-    - name: Test if netfilter is already enabled
-      shell: if grep -q "^net.bridge.bridge-nf-call-iptables = 1" /etc/sysctl.conf; then echo false; else echo true;  fi
-      register: test_grep
-
-    - name: Enable netfilter config if not already enabled
-      lineinfile:
-        dest: /etc/sysctl.conf
-        line: net.bridge.bridge-nf-call-iptables = 1
-      when: test_grep.stdout == "true"
+    - name: Enable netfilter permanently
+      sysctl:
+        name: net.bridge.bridge-nf-call-iptables
+        value: 1
+        state: present
+        reload: yes
 
     - name: Ensure /etc/apt/keyrings exists
       file:
@@ -35,7 +34,7 @@
         state: directory
         mode: '0755'
 
-    - name: Download Docker GPG key
+    - name: Add Docker GPG key
       get_url:
         url: https://download.docker.com/linux/ubuntu/gpg
         dest: /etc/apt/keyrings/docker.asc
@@ -47,18 +46,18 @@
       args:
         creates: /etc/apt/keyrings/docker.gpg
 
-    - name: Add Docker repository using keyring
+    - name: Add Docker repository
       copy:
         dest: /etc/apt/sources.list.d/docker.list
         content: |
           deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu jammy stable
         mode: '0644'
 
-    - name: Update apt cache after adding Docker repo
+    - name: Update apt cache
       apt:
         update_cache: yes
 
-    - name: Install Docker packages
+    - name: Install Docker & containerd
       apt:
         name:
           - docker-ce
@@ -67,7 +66,6 @@
           - docker-buildx-plugin
           - docker-compose-plugin
         state: present
-        update_cache: yes
 
     - name: Start and enable Docker
       service:
@@ -75,19 +73,24 @@
         state: started
         enabled: yes
 
-    - name: Copy docker daemon.json config
+    - name: Copy docker daemon config
       copy:
         src: ./daemon.json
         dest: /etc/docker/daemon.json
-        follow: yes
 
     - name: Remove old containerd config
       file:
         path: /etc/containerd/config.toml
         state: absent
 
+    - name: Ensure containerd config directory exists
+      file:
+        path: /etc/containerd
+        state: directory
+        mode: '0755'
+
     - name: Generate default containerd config
-      shell: "containerd config default > /etc/containerd/config.toml"
+      shell: containerd config default > /etc/containerd/config.toml
       args:
         executable: /bin/bash
 
@@ -100,10 +103,10 @@
     - name: Restart containerd
       systemd:
         name: containerd
-        enabled: true
+        enabled: yes
         state: restarted
 
-    - name: Remove old Kubernetes APT key and repo
+    - name: Remove old Kubernetes keys and repos
       file:
         path: "{{ item }}"
         state: absent
@@ -111,7 +114,7 @@
         - /etc/apt/sources.list.d/kubernetes.list
         - /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
-    - name: Create keyrings directory for Kubernetes
+    - name: Create Kubernetes keyring dir
       file:
         path: /etc/apt/keyrings
         state: directory
@@ -133,7 +136,7 @@
         content: |
           deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /
 
-    - name: Set correct permissions on Kubernetes GPG key
+    - name: Set permissions on Kubernetes key
       file:
         path: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
         mode: '0644'
@@ -142,54 +145,89 @@
       apt:
         update_cache: yes
 
-    - name: Install Kubernetes packages
+    - name: Install Kubernetes components
       apt:
         name:
           - kubelet
           - kubeadm
           - kubectl
         state: present
-        update_cache: yes
 
-    - name: Hold Kubernetes packages at current version
-      shell: "apt-mark hold kubelet kubeadm kubectl"
+    - name: Hold Kubernetes packages
+      shell: apt-mark hold kubelet kubeadm kubectl
 
+# Master setup
 - hosts: master
   become: true
   tasks:
-    - name: Initialize Kubernetes cluster
-      command: kubeadm init --ignore-preflight-errors=all --pod-network-cidr=192.168.0.0/16
-      register: kubeadm_init
+    - name: Get master's private IP
+      shell: hostname -I | awk '{print $1}'
+      register: private_ip
 
-    - name: Create .kube directory
+    - name: Initialize Kubernetes cluster
+      command: kubeadm init --ignore-preflight-errors=all --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address={{ private_ip.stdout }}
+      register: kubeadm_init
+      when: private_ip.stdout != ""
+
+    - name: Create kube config directory
       file:
         path: /root/.kube
         state: directory
         mode: 0700
 
-    - name: Copy admin.conf to user's kube config
+    - name: Copy admin config
       copy:
         src: /etc/kubernetes/admin.conf
         dest: /root/.kube/config
         remote_src: yes
 
-    - name: Install Calico network plugin
+    - name: Install Calico CNI
       shell: |
         kubectl apply -f https://docs.projectcalico.org/v3.25/manifests/calico.yaml
       environment:
         KUBECONFIG: /root/.kube/config
 
-    - name: Get kubeadm join command
+    - name: Generate kubeadm join command
       shell: kubeadm token create --print-join-command
-      register: join_command_output
+      register: join_command
 
-    - name: Set join command fact
-      set_fact:
-        kubeadm_join_cmd: "{{ join_command_output.stdout }}"
+    - name: Save join command to file
+      copy:
+        content: "{{ join_command.stdout }}"
+        dest: /tmp/kube_join.sh
+        mode: '0755'
 
+    - name: Fetch join command to controller
+      fetch:
+        src: /tmp/kube_join.sh
+        dest: /tmp/kube_join.sh
+        flat: yes
+
+# Worker node setup
 - hosts: workers
   become: true
   tasks:
-    - name: Join worker nodes to the cluster
-      shell: "{{ hostvars['master']['kubeadm_join_cmd'] }} --ignore-preflight-errors=all"
+    - name: Reset node before joining cluster (clean previous attempts)
+      command: kubeadm reset -f
+
+    - name: Clean up Kubernetes related directories
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /etc/cni/net.d
+        - /var/lib/cni
+        - /var/lib/kubelet
+        - /etc/kubernetes
+        - /var/lib/etcd
+
+
+    - name: Copy join command script to worker
+      copy:
+        src: /tmp/kube_join.sh
+        dest: /tmp/kube_join.sh
+        mode: '0755'
+
+    - name: Join the cluster
+      command: sh /tmp/kube_join.sh
 
