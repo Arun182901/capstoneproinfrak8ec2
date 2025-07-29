@@ -154,10 +154,12 @@
     - name: Hold Kubernetes packages at current version
       shell: "apt-mark hold kubelet kubeadm kubectl"
 
+- hosts: master
+  become: true
+  tasks:
     - name: Initialize Kubernetes cluster
       command: kubeadm init --ignore-preflight-errors=all --pod-network-cidr=192.168.0.0/16
       register: kubeadm_init
-      when: inventory_hostname == 'master'
 
     - name: Create .kube directory
       file:
@@ -176,4 +178,18 @@
         kubectl apply -f https://docs.projectcalico.org/v3.25/manifests/calico.yaml
       environment:
         KUBECONFIG: /root/.kube/config
+
+    - name: Get kubeadm join command
+      shell: kubeadm token create --print-join-command
+      register: join_command_output
+
+    - name: Set join command fact
+      set_fact:
+        kubeadm_join_cmd: "{{ join_command_output.stdout }}"
+
+- hosts: workers
+  become: true
+  tasks:
+    - name: Join worker nodes to the cluster
+      shell: "{{ hostvars['master']['kubeadm_join_cmd'] }} --ignore-preflight-errors=all"
 
