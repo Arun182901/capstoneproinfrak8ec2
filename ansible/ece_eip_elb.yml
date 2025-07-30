@@ -1,0 +1,124 @@
+---
+- name: Launch EC2, attach EIP, and configure ALB
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  collections:
+    - amazon.aws
+    - community.aws
+
+  vars:
+    region: us-east-1
+    key_name: key1
+    instance_type: t2.micro
+    ami_id: ami-020cba7c55df1f615
+    vpc_id: vpc-001ce632af3c6d561
+    subnet_ids: 
+      - subnet-0ba8515299db5da39   # AZ1
+      - subnet-09c3d764b553626d4   # AZ2 (replace with your actual subnet in a different AZ)
+
+    security_group_ids: ["sg-06de367a87ff03102"]
+
+  tasks:
+    - name: Launch EC2 instance
+      amazon.aws.ec2_instance:
+        name: "EIP-Attached"
+        key_name: "{{ key_name }}"
+        instance_type: "{{ instance_type }}"
+        image:
+          id: "{{ ami_id }}"
+        region: "{{ region }}"
+        wait: true
+        count: 1
+        network:
+          assign_public_ip: false
+          subnet_id: "{{ subnet_ids[0] }}"
+          security_group_id: "{{ security_group_ids[0] }}"
+        tags:
+          Environment: Dev
+      register: ec2_result
+
+    - name: Display instance info
+      debug:
+        var: ec2_result.instances[0]
+
+    - name: Wait until the instance is in running state
+      amazon.aws.ec2_instance_info:
+        region: "{{ region }}"
+        instance_ids: ["{{ ec2_result.instances[0].instance_id }}"]
+      register: instance_state
+      until: instance_state.instances[0].state.name == "running"
+      retries: 10
+      delay: 6
+
+    - name: Gather all EIPs in the region
+      amazon.aws.ec2_eip_info:
+        region: "{{ region }}"
+      register: eip_info
+
+    - name: Set first unassociated EIP if available
+      set_fact:
+        free_eip: "{{ item.public_ip }}"
+      when: item.instance_id is not defined and (free_eip is not defined)
+      loop: "{{ eip_info.addresses }}"
+
+    - name: Allocate new EIP if no free one found
+      amazon.aws.ec2_eip:
+        region: "{{ region }}"
+        in_vpc: true
+        state: present
+      register: eip_result
+      when: free_eip is not defined
+
+    - name: Set EIP to associate
+      set_fact:
+        final_eip: "{{ free_eip | default(eip_result.eip.public_ip) }}"
+
+    - name: Associate EIP with EC2 instance
+      amazon.aws.ec2_eip:
+        region: "{{ region }}"
+        device_id: "{{ ec2_result.instances[0].instance_id }}"
+        public_ip: "{{ final_eip }}"
+        state: present
+
+    - name: Show final EIP info
+      debug:
+        msg: "Elastic IP {{ final_eip }} has been attached to instance {{ ec2_result.instances[0].instance_id }}"
+
+    - name: Create Target Group
+      community.aws.elb_target_group:
+        name: ansible-tg
+        protocol: HTTP
+        port: 80
+        vpc_id: "{{ vpc_id }}"
+        target_type: instance
+        region: "{{ region }}"
+        state: present
+      register: tg_result
+
+    - name: Register EC2 instance with Target Group
+      community.aws.elb_target:
+        target_group_arn: "{{ tg_result.target_group_arn }}"
+        target_id: "{{ ec2_result.instances[0].instance_id }}"
+        target_port: 80
+        region: "{{ region }}"
+        state: present
+
+    - name: Create Application Load Balancer
+      amazon.aws.elb_application_lb:
+        name: ansible-alb123
+        subnets: "{{ subnet_ids }}"
+        security_groups: "{{ security_group_ids }}"
+        scheme: internet-facing
+        state: present
+        region: "{{ region }}"
+        ip_address_type: ipv4
+        tags:
+          Environment: Dev
+      register: alb_result
+
+    - name: Show ALB DNS
+      debug:
+        msg: "ALB created: http://{{ alb_result.dns_name }}"
+

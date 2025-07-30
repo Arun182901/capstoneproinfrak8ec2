@@ -1,0 +1,42 @@
+- name: Gather all EIPs
+  amazon.aws.ec2_eip_info:
+    region: "{{ region }}"
+  register: eip_info
+
+- name: Find a free (unassociated) EIP
+  set_fact:
+    free_eip: "{{ item.public_ip }}"
+  when: item.instance_id is not defined
+  loop: "{{ eip_info.addresses }}"
+  loop_control:
+    loop_var: item
+  register: free_eip_result
+
+- name: Allocate a new EIP if none found
+  amazon.aws.ec2_eip:
+    region: "{{ region }}"
+    in_vpc: true
+    state: present
+  register: eip_alloc
+  when: free_eip_result.results | selectattr('ansible_facts.free_eip', 'defined') | list | length == 0
+
+- name: Set final EIP value
+  set_fact:
+    final_eip: >-
+      {{
+        (free_eip_result.results | selectattr('ansible_facts.free_eip', 'defined') | map(attribute='ansible_facts.free_eip') | first)
+        if (free_eip_result.results | selectattr('ansible_facts.free_eip', 'defined') | list | length > 0)
+        else eip_alloc.eip.public_ip
+      }}
+
+- name: Associate EIP with instance
+  amazon.aws.ec2_eip:
+    region: "{{ region }}"
+    device_id: "{{ instance.instance_id }}"
+    public_ip: "{{ final_eip }}"
+    state: present
+
+- name: Show associated EIP
+  debug:
+    msg: "EIP {{ final_eip }} associated with instance {{ instance.instance_id }}"
+

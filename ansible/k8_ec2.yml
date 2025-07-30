@@ -1,0 +1,124 @@
+---
+- name: Launch named EC2 instances with roles, associate EIPs, and configure ALB
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  collections:
+    - amazon.aws
+    - community.aws
+
+  vars:
+    region: us-east-1
+    key_name: key1
+    instance_type: t2.micro
+    ami_id: ami-020cba7c55df1f615
+    vpc_id: vpc-001ce632af3c6d561
+    subnet_ids:
+      - subnet-0ba8515299db5da39
+      - subnet-09c3d764b553626d4
+    security_group_ids:
+      - sg-06de367a87ff03102
+
+    instance_definitions:
+      - name: master
+        role: Master
+        subnet: "{{ subnet_ids[0] }}"
+      - name: worker1
+        role: Worker1
+        subnet: "{{ subnet_ids[0] }}"
+      - name: worker2
+        role: Worker2
+        subnet: "{{ subnet_ids[1] }}"
+
+  tasks:
+
+    - name: Launch EC2 instances (master, worker1, worker2)
+      amazon.aws.ec2_instance:
+        name: "{{ item.name }}"
+        key_name: "{{ key_name }}"
+        instance_type: "{{ instance_type }}"
+        image:
+          id: "{{ ami_id }}"
+        region: "{{ region }}"
+        wait: true
+        network:
+          assign_public_ip: false
+          subnet_id: "{{ item.subnet }}"
+          security_group_id: "{{ security_group_ids[0] }}"
+        tags:
+          Name: "{{ item.name }}"
+          Role: "{{ item.role }}"
+          Environment: Dev
+      loop: "{{ instance_definitions }}"
+      register: ec2_result
+
+    - name: Extract launched instances with metadata
+      set_fact:
+        launched_instances: "{{ ec2_result.results | map(attribute='instances') | list | flatten(1) }}"
+
+    - name: Combine launched instances with role and name
+      set_fact:
+        all_instances: >-
+          {{
+            launched_instances | zip(instance_definitions)
+            | map('combine') | list
+          }}
+
+    - name: Wait until all instances are in running state
+      amazon.aws.ec2_instance_info:
+        region: "{{ region }}"
+        instance_ids: "{{ all_instances | map(attribute='instance_id') | list }}"
+      register: instance_state
+      until: instance_state.instances | selectattr('state.name', 'equalto', 'running') | list | length == 3
+      retries: 10
+      delay: 6
+
+    - name: Associate/allocate EIP for each instance
+      include_tasks: associate_eip.yml
+      loop: "{{ all_instances }}"
+      loop_control:
+        loop_var: instance
+
+    - name: Create Target Group
+      community.aws.elb_target_group:
+        name: ansible-tg
+        protocol: HTTP
+        port: 80
+        vpc_id: "{{ vpc_id }}"
+        target_type: instance
+        region: "{{ region }}"
+        state: present
+      register: tg_result
+
+    - name: Register EC2 instances with Target Group
+      community.aws.elb_target:
+        target_group_arn: "{{ tg_result.target_group_arn }}"
+        region: "{{ region }}"
+        target_id: "{{ item.instance_id }}"
+        target_port: 80
+        state: present
+      loop: "{{ all_instances }}"
+
+    - name: Create Application Load Balancer
+      amazon.aws.elb_application_lb:
+        name: ansible-alb123
+        subnets: "{{ subnet_ids }}"
+        security_groups: "{{ security_group_ids }}"
+        scheme: internet-facing
+        state: present
+        region: "{{ region }}"
+        ip_address_type: ipv4
+        tags:
+          Environment: Dev
+      register: alb_result
+
+    - name: Show ALB DNS
+      debug:
+        msg: "ALB created: http://{{ alb_result.dns_name }}"
+
+    - name: Generate inventory.ini using template
+      template:
+        src: templates/inventory.ini.j2
+        dest: /root/ansible/inventory.ini
+

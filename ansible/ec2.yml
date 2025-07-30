@@ -1,0 +1,40 @@
+---
+- name: Launch EC2 Instances in AWS
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  collections:
+    - amazon.aws
+
+  vars:
+    region: us-east-1
+    key_name: key1                    # Replace with your key pair
+    instance_type: t2.micro
+    ami_id: ami-020cba7c55df1f615    # Replace with your AMI ID
+    security_group: sg-06de367a87ff03102       # Replace with your SG ID
+    subnet_id: subnet-0ba8515299db5da39        # Replace with your subnet ID
+    instance_count: 2
+
+  tasks:
+    - name: Launch EC2 instances
+      amazon.aws.ec2_instance:
+        name: "My-Ansible-EC2"
+        key_name: "{{ key_name }}"
+        instance_type: "{{ instance_type }}"
+        image_id: "{{ ami_id }}"
+        region: "{{ region }}"
+        wait: true
+        count: "{{ instance_count }}"
+        vpc_subnet_id: "{{ subnet_id }}"
+        security_group: "{{ security_group }}"
+        tags:
+          Environment: Dev
+          Role: Web
+      register: ec2_result
+
+    - name: Show launched instance public IPs
+      debug:
+        msg: "Instance {{ item.instance_id }} has public IP {{ item.public_ip_address }}"
+      loop: "{{ ec2_result.instances }}"
+

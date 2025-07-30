@@ -1,0 +1,32 @@
+---
+- name: Launch EC2 instances
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Launch EC2 instances
+      ec2:
+        key_name: my-key
+        instance_type: t2.mirco
+        image: ami-020cba7c55df1f615
+        region: us-east-1
+        group: ["my-sg"]
+        wait: yes
+        count: 3
+        assign_public_ip: yes
+        instance_tags:
+          Name: "k8s-node"
+        vpc_subnet_id: vpc-001ce632af3c6d561
+        elastic_ip: yes
+      register: ec2
+
+    - name: Create Load Balancer (ELB)
+      elb_application_lb:
+        name: k8s-elb
+        state: present
+        subnets:
+          - subnet-0ba8515299db5da39   # AZ1
+          - subnet-09c3d764b553626d4   # AZ2
+        security_groups:
+          - sg-06de367a87ff03102
+        scheme: internet-facing
