@@ -204,7 +204,7 @@
         flat: yes
 
 # Worker node setup
-- hosts: workers
+- hosts: worker
   become: true
   tasks:
     - name: Reset node before joining cluster (clean previous attempts)
@@ -222,12 +222,34 @@
         - /var/lib/etcd
 
 
+
+    - name: Restart containerd
+      systemd:
+        name: containerd
+        state: restarted
+        enabled: yes
+
+    - name: Restart kubelet
+      systemd:
+        name: kubelet
+        state: restarted
+        enabled: yes
+
+
+
     - name: Copy join command script to worker
       copy:
         src: /tmp/kube_join.sh
         dest: /tmp/kube_join.sh
         mode: '0755'
 
-    - name: Join the cluster
-      command: sh /tmp/kube_join.sh
+    - name: Join the cluster (ignore preflight errors)
+      shell: |
+        bash -c "$(sed 's/kubeadm join/& --ignore-preflight-errors=all --v=5/' /tmp/kube_join.sh)"
+      become: yes
+      register: join_result
+      retries: 3
+      delay: 30
+      until: join_result.rc == 0
+
 

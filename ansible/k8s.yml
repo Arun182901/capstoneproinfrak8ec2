@@ -13,12 +13,12 @@
     key_name: key1
     instance_type: t2.micro
     ami_id: ami-020cba7c55df1f615
-    vpc_id: vpc-04518812d4ed1e6f7
+    vpc_id: vpc-0ae1d2116842f0dad
     subnet_ids:
-      - subnet-04b61d903dc69c816
-      - subnet-0cbbd13dd729b629b
+      - subnet-0bbcb1ac0974d1b3b
+      - subnet-0ab5189bac5d1515e
     security_group_ids:
-      - sg-061292d6e22a1277f
+      - sg-090cc69f6b4c9f3c8
 
     instance_definitions:
       - name: master
