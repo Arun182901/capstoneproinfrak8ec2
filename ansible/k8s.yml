@@ -43,7 +43,7 @@
         region: "{{ region }}"
         wait: true
         network:
-          assign_public_ip: true
+          assign_public_ip: false
           subnet_id: "{{ item.subnet }}"
           security_group_id: "{{ security_group_ids[0] }}"
         tags:
@@ -53,7 +53,7 @@
       loop: "{{ instance_definitions }}"
       register: ec2_result
 
-    - name: Extract launched instances
+    - name: Extract launched instances with metadata
       set_fact:
         launched_instances: "{{ ec2_result.results | map(attribute='instances') | list | flatten(1) }}"
 
@@ -65,7 +65,7 @@
             | map('combine') | list
           }}
 
-    - name: Wait until all instances are in running state
+    - name: Wait until all instances are running
       amazon.aws.ec2_instance_info:
         region: "{{ region }}"
         instance_ids: "{{ all_instances | map(attribute='instance_id') | list }}"
@@ -74,11 +74,37 @@
       retries: 10
       delay: 6
 
-    - name: Associate/allocate EIP for each instance
+    - name: Associate EIPs with instances
       include_tasks: associate_eip.yml
       loop: "{{ all_instances }}"
       loop_control:
         loop_var: instance
+
+    - name: Refresh instance info after EIP association
+      amazon.aws.ec2_instance_info:
+        region: "{{ region }}"
+        instance_ids: "{{ all_instances | map(attribute='instance_id') | list }}"
+      register: final_instance_info
+
+    - name: Create inventory.ini file
+      copy:
+        dest: /root/inventory.ini
+        content: |
+          [master]
+          {% for inst in final_instance_info.instances if 'Master' in inst.tags.Role %}
+          {{ inst.tags.Name }} ansible_host={{ inst.public_ip_address }} ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/key1.pem
+          {% endfor %}
+
+          [worker]
+          {% for inst in final_instance_info.instances if 'Worker' in inst.tags.Role %}
+          {{ inst.tags.Name }} ansible_host={{ inst.public_ip_address }} ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/key1.pem
+          {% endfor %}
+
+    - name: Delete old Target Group if exists
+      community.aws.elb_target_group:
+        name: ansible-tg
+        region: "{{ region }}"
+        state: absent
 
     - name: Create Target Group
       community.aws.elb_target_group:
@@ -91,7 +117,7 @@
         state: present
       register: tg_result
 
-    - name: Register EC2 instances with Target Group
+    - name: Register EC2 instances to Target Group
       community.aws.elb_target:
         target_group_arn: "{{ tg_result.target_group_arn }}"
         region: "{{ region }}"
@@ -117,26 +143,3 @@
       debug:
         msg: "ALB created: http://{{ alb_result.dns_name }}"
 
-    # 🔁 Refresh and extract correct public IPs for final inventory
-    - name: Refresh EC2 instance info to get updated public IPs
-      amazon.aws.ec2_instance_info:
-        region: "{{ region }}"
-        filters:
-          "tag:Environment": "Dev"
-      register: final_instance_info
-
-    - name: Build final inventory with public IPs
-      set_fact:
-        final_inventory: >-
-          {{
-            final_instance_info.instances |
-            map(lambda x: {
-              'name': x.tags.Name,
-              'public_ip': x.public_ip_address
-            }) | list
-          }}
-
-    - name: Generate inventory.ini using template
-      template:
-        src: templates/inventory.ini.j2
-        dest: /root/ansible/inventory.ini

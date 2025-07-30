@@ -26,7 +26,7 @@
       {{
         (free_eip_result.results | selectattr('ansible_facts.free_eip', 'defined') | map(attribute='ansible_facts.free_eip') | first)
         if (free_eip_result.results | selectattr('ansible_facts.free_eip', 'defined') | list | length > 0)
-        else eip_alloc.eip.public_ip
+        else eip_alloc.public_ip
       }}
 
 - name: Associate EIP with instance
