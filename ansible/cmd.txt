@@ -1,0 +1,3622 @@
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+ sudo apt install ansible -y
+   41  sudo apt install awscli -y
+   42  ansible-galaxy collection install amazon.aws
+   43  ansible-galaxy collection install amazon.aws --force
+   44  aws configure
+   45  mkdir ansible
+   46  cd ansible/
+   47  vi ec2.yml
+   48  ansible-playbook ec2.yml 
+   49  sudo apt update && sudo apt install python3-pip -y
+   50  pip install ansible
+   51  ansible-galaxy collection install amazon.aws
+   52  pip install boto3 botocore
+   53  ~pip install boto3 botocore
+   54  pip install boto3 botocore
+   55  aws configure
+   56  ansible --version
+   57  vi ec2.yml 
+   58  ansible-playbook ec2.yml 
+   59  pip uninstall ansible
+   60  pip install "ansible==2.15.3"
+   61  pip uninstall ansible
+   62  apt remove ansible -y
+   63  pip install "ansible==2.15.3"
+   64  python3 -m venv ~/ansible-venv
+   65  cd
+   66  python3 -m venv ~/ansible-venv
+   67  apt install python3.10-venv~
+   68  apt install python3.10-venv
+   69  python3 -m venv ~/ansible-venv
+   70  source ~/ansible-venv/bin/activate
+   71  pip install --upgrade pip
+   72  pip install "ansible-core==2.15.9"
+   73  pip install "ansible==7.7.0"
+   74  ansible --version
+   75  ansible-galaxy collection install amazon.aws
+   76  ansible-galaxy collection install amazon.aws --force
+   77  ansible-galaxy collection install amazon.aws:==5.6.0
+   78  ansible-galaxy collection install amazon.aws:==5.5.0
+   79  ansible-galaxy collection search amazon.aws --collections --no-galaxy
+   80  ansible-galaxy collection install amazon.aws
+   81  ansible-galaxy collection list | grep amazon.aws
+   82  cd ansible
+   83  vi ec2.yml 
+   84  ansible-playbook ec2.yml 
+   85  source ~/ansible-venv/bin/activate
+   86  pip install boto3 botocore
+   87  pip list | grep boto
+   88  ansible-playbook ec2.yml
+   89  clear
+   90  vi ec2_eip.yml
+   91  ansible-playbook ec2_eip.yml 
+   92  vi ec2_eip.yml
+   93  ansible-playbook ec2_eip.yml 
+   94  vi ec2_eip.yml
+   95  ansible-playbook ec2_eip.yml 
+   96  vi ec2_eip.yml 
+   97  ansible-playbook ec2_eip.yml 
+   98  vi ec2_eip.yml 
+   99  ansible-playbook ec2_eip.yml 
+  100  vi ec2_eip.yml 
+  101  ansible-playbook ec2_eip.yml 
+  102  vi ec2_eip.yml 
+  103  ansible-playbook ec2_eip.yml 
+  104  vi ec2_eip.yml 
+  105  ansible-playbook ec2_eip.yml 
+  106  cat ec2_eip.yml 
+  107  vi ec2_eip.yml 
+  108  ansible-playbook ec2_eip.yml 
+  109  vi ece_eip_elb.yml
+  110  ansible-playbook ece_eip_elb.yml 
+  111  ansible-galaxy collection install amazon.aws --upgrade
+  112  ansible-galaxy collection list | grep amazon.aws
+  113  ansible-doc -t module amazon.aws.elb_target_group
+  114  vi ece_eip_elb.yml
+  115  ansible-playbook ece_eip_elb.yml 
+  116  pip install --upgrade "ansible>=2.15,<2.17"
+  117  sudo apt update
+  118  sudo apt install -y software-properties-common
+  119  cd
+  120  sudo add-apt-repository ppa:deadsnakes/ppa
+  121  sudo apt update
+  122  sudo add-apt-repository ppa:deadsnakes/ppa
+  123  sudo apt update
+  124  sudo apt install -y python3.11 python3.11-venv python3.11-dev
+  125  python3.11 -m venv ansible-venv-py311
+  126  source ansible-venv-py311/bin/activate
+  127  pip install "ansible>=2.15,<2.17"
+  128  pip install --upgrade pip
+  129  pip install "ansible>=10.0.0,<11.0.0"
+  130  ansible --version
+  131  ansible-galaxy collection install amazon.aws:==10.1.0
+  132  ansible-doc -t module amazon.aws.elb_target_group
+  133  ansible-doc -t module -l | grep elb
+  134  cd ansible
+  135  vi ece_eip_elb.yml 
+  136  ansible-playbook ece_eip_elb.yml 
+  137  vi ece_eip_elb.yml 
+  138  ansible-playbook ece_eip_elb.yml 
+  139  ansible-doc -t module amazon.aws.elb_listener
+  140  vi ece_eip_elb.yml 
+  141  ansible-playbook ece_eip_elb.yml 
+  142  ansible-doc -t module community.aws.elb_listener
+  143  ansible-galaxy collection install community.aws --upgrade
+  144  ansible-doc -t module community.aws.elb_application_lb_listener
+  145  aws elbv2 describe-load-balancers --names ansible-alb --query "LoadBalancers[0].DNSName" --output text
+  146  vi ece_eip_elb.yml 
+  147  ansible-playbook ece_eip_elb.yml 
+  148  vi ece_eip_elb.yml 
+  149  ansible-playbook ece_eip_elb.yml 
+  150  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  151  cd
+  152  ansible-galaxy collection install amazon.aws:>=6.0.0 --force
+  153  pip install boto3 botocore
+  154  ansible-doc -t lookup amazon.aws.ec2_vpc_subnet_info
+  155  vi ece_eip_elb.yml 
+  156  cd ansible
+  157  vi ece_eip_elb.yml 
+  158  ansible-playbook ece_eip_elb.yml 
+  159  vi ece_eip_elb.yml 
+  160  ansible-playbook ece_eip_elb.yml 
+  161  vi ece_eip_elb.yml 
+  162  ansible-playbook ece_eip_elb.yml 
+  163  vi ece_eip_elb.yml 
+  164  ansible-playbook ece_eip_elb.yml 
+  165  ls
+  166  cat ec2_eip.yml 
+  167  vi ece_eip_elb.yml 
+  168  ansible-playbook ece_eip_elb.yml 
+  169  vi ece_eip_elb.yml 
+  170  ansible-playbook ece_eip_elb.yml 
+  171  vi ece_eip_elb.yml 
+  172  ansible-playbook ece_eip_elb.yml --start-at-task="Create Target Group"
+  173  ansible-playbook ece_eip_elb.yml
+  174  vi ece_eip_elb.yml 
+  175  ansible-playbook ece_eip_elb.yml
+  176  vi ece_eip_elb.yml 
+  177  ansible-playbook ece_eip_elb.yml
+  178  vi ece_eip_elb.yml 
+  179  ansible-playbook ece_eip_elb.yml
+  180  vi ec2_eip_elb_listener.yml
+  181  ansible-playbook ec2_eip_elb_listener.yml 
+  182  provision_ec2.yml
+  183  vi provision_ec2.yml
+  184  ansible-playbook provision_ec2.yml 
+  185  cat ece_eip_elb.yml 
+  186  vi k8_ec2.yml
+  187  ansible-playbook k8_ec2.yml 
+  188  vi k8_ec2.yml
+  189  ansible-playbook k8_ec2.yml 
+  190  vi k8_ec2.yml
+  191  ansible-playbook k8_ec2.yml 
+  192  vi associate_eip.yml
+  193  vi k8_ec2.yml 
+  194  ansible-playbook k8_ec2.yml 
+  195  vi k8_ec2.yml 
+  196  ansible-playbook k8_ec2.yml 
+  197  clear
+  198  vi inventory.ini.j2
+  199  cd
+  200  cd .ssh/
+  201  vi key1.pem
+  202  cd
+  203  cd ansible
+  204  pwd
+  205  cd
+  206  cd .ssh/
+  207  chmod 400 key1.pem 
+  208  cd
+  209  cd ansible
+  210  vi ece_eip_elb.yml 
+  211  vi k8_ec2.yml 
+  212  ansible-playbook k8_ec2.yml 
+  213  cat k8_ec2.yml 
+  214  vi k8_ec2.yml 
+  215  ansible-playbook k8_ec2.yml 
+  216  mkdir -p /root/ansible/templates~
+  217  mkdir -p /root/ansible/templates
+  218  mv /root/ansible/inventory.ini.j2 /root/ansible/templates/
+  219  vi k8_ec2.yml 
+  220  ansible-playbook k8_ec2.yml 
+  221  ls
+  222  cat inventory.ini 
+  223  vi inventory.ini 
+  224  cd templates/
+  225  cat inventory.ini.j2 
+  226  vi inventory.ini.j2 
+  227  ansible-playbook k8_ec2.yml 
+  228  cd -
+  229  ansible-playbook k8_ec2.yml 
+  230  cd templates/
+  231  vi inventory.ini.j2 
+  232  cd -
+  233  ansible-playbook k8_ec2.yml 
+  234  cat inventory.ini 
+  235  cd
+  236  git clone https://github.com/Arun182901/capstoneproinfrak8ec2.git
+  237  ls
+  238  cd ansible
+  239  ls
+  240  cd -
+  241  cd ansible-venv
+  242  ls
+  243  cd
+  244  cd ansible-venv-py311/
+  245  ls
+  246  cd
+  247  mv ansible capstoneproinfrak8ec2/
+  248  cd capstoneproinfrak8ec2/
+  249  ls
+  250  git add .
+  251  git commit -m 'ansible IAC'
+  252  git push origin main
+
